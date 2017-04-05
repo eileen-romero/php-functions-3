@@ -16,7 +16,7 @@ function doSomething($theName, $theArray, $theActivity, $theQuantity) {
     $calories = $theArray[$theActivity];
     $total = $calories * $theQuantity;
     if ($theQuantity < 2) {
-      $title = titlecase($theActivity).' for '.$theName;
+      $title = titlecase($theActivity).' for '.$theQuantity. ' hour ';
       $theTotal = 'Total Calories Burned:'.number_format($total, 0);
       $description = $theName.' did '.$theQuantity.' hours of '.$theActivity.'.';
     } elseif ($theQuantity > 50) {
@@ -24,9 +24,9 @@ function doSomething($theName, $theArray, $theActivity, $theQuantity) {
       $theActivity = 'rediculous';
       $description = 'Don&rsquo;t be ridiculous, '.$theName.', that&rsquo;s more '.$activity.'than any one person can ever do! Also, you don&rsquo;t have any Energy!';
     } else {
-      $title = titlecase($theActivity).' for '.$theName;
-      $theTotal = 'Total: $'.number_format($total, 2);
-      $description = $theName.' ordered '.number_format($theQuantity).' '.$theActivity.'s.';
+      $title = titlecase($theActivity).' for '.$theQuantity. ' hours ';
+      $theTotal = 'Total Calories Burned: '.number_format($total, 2);
+      $description = $theName.' burned '.number_format($total).'.';
     }
   } else {
     $valid = false;

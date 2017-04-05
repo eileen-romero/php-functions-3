@@ -45,7 +45,7 @@
           <?php foreach ($theAdventures as $action => $burn) {
             echo '<option value="'.$action.'">'.capfirst($action).'</option>';
           }; ?>
-        </select> <span class="mr-2">for</span>
+        </select> <span class="mr-2"> for</span>
         <input class="form-control mr-2" type="number" value="<?php echo ( $hours ? $hours : '' );?>" placeholder="# of hours" name="quantity" id="quantity">
         <button class="btn btn-outline-primary" name="submit" type="submit">Submit</button>
       </form>
